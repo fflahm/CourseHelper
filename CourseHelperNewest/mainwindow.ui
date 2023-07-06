@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,1,0">
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="OutLayout" stretch="1,0,0,0,2">
+      <item>
+       <spacer name="UpSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="UpLayout" stretch="1,8,1">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="AddPlan">
+          <property name="styleSheet">
+           <string notr="true">background-color:white</string>
+          </property>
+          <property name="text">
+           <string>新建选课计划</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="RecommendLayout">
+          <item>
+           <spacer name="OutSpacer2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Recommend">
+            <property name="styleSheet">
+             <string notr="true">background-color:white</string>
+            </property>
+            <property name="text">
+             <string>推荐选课方案</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="OutSpacer1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AddCourse">
+          <property name="styleSheet">
+           <string notr="true">background-color:white</string>
+          </property>
+          <property name="text">
+           <string> 新建课程 </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="MainLayout" stretch="1,8,1">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="LeftLayout">
+          <item>
+           <widget class="QWidget" name="PlanWidget" native="true">
+            <widget class="QWidget" name="verticalLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>160</width>
+               <height>80</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="PlanLayout"/>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <spacer name="Spacer1">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="MiddleLayout" stretch="1,12">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="WeekLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="BlankLabel">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="MonLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期一</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="TueLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期二</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="WedLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期三</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ThuLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期四</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="FriLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期五</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="SatLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期六</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="SunLabel">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid black</string>
+              </property>
+              <property name="text">
+               <string>星期日</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="TableLayout" stretch="1,7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="TimeLayout">
+              <item>
+               <widget class="QLabel" name="T1Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T2Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T3Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>3</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T4Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T5Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>5</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T6Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>6</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T7Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>7</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T8Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>8</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T9Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>9</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T10Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>10</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T11Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>11</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="T12Label">
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid black</string>
+                </property>
+                <property name="text">
+                 <string>12</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="CourseTableLayout">
+              <item>
+               <layout class="QVBoxLayout" name="C1Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C2Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C3Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C4Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C5Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C6Layout"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="C7Layout"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="RightLayout">
+          <item>
+           <widget class="QWidget" name="CourseWidget" native="true">
+            <widget class="QWidget" name="verticalLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>30</y>
+               <width>160</width>
+               <height>80</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="CourseLayout"/>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <spacer name="Spacer2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="DownLayout" stretch="1,8,1">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="DeletePlan">
+          <property name="styleSheet">
+           <string notr="true">background-color:white</string>
+          </property>
+          <property name="text">
+           <string>删除选课计划</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="OutSpacer3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="DeleteCourse">
+          <property name="styleSheet">
+           <string notr="true">background-color:white</string>
+          </property>
+          <property name="text">
+           <string> 删除课程 </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="InformLayout" stretch="1,3,3,3,3,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>13</width>
+            <height>14</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="OutNameLayout" stretch="0,0,1">
+          <item>
+           <widget class="QLabel" name="InformNameLabel">
+            <property name="styleSheet">
+             <string notr="true">border: 1px solid black</string>
+            </property>
+            <property name="text">
+             <string>课程名</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="InformNameLayout"/>
+          </item>
+          <item>
+           <spacer name="Spacer3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="OutPriorityLayout" stretch="0,0,1">
+          <item>
+           <widget class="QLabel" name="InformPriorityLabel">
+            <property name="styleSheet">
+             <string notr="true">border: 1px solid black</string>
+            </property>
+            <property name="text">
+             <string>优先度</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="InformPriorityLayout"/>
+          </item>
+          <item>
+           <spacer name="Spacer4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="OutPointLayout">
+          <item>
+           <widget class="QLabel" name="InformPointLabel">
+            <property name="styleSheet">
+             <string notr="true">border: 1px solid black</string>
+            </property>
+            <property name="text">
+             <string>学分</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="InformPointLayout"/>
+          </item>
+          <item>
+           <spacer name="Spacer5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="OutTimeLayout">
+          <item>
+           <widget class="QLabel" name="InformTimeLabel">
+            <property name="styleSheet">
+             <string notr="true">border: 1px solid black</string>
+            </property>
+            <property name="text">
+             <string>学时</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="InformTimeLayout"/>
+          </item>
+          <item>
+           <spacer name="Spacer6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>13</width>
+            <height>14</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <spacer name="LeftSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2">
+     <spacer name="RightSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
