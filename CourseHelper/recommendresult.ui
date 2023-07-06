@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecommendResult</class>
+ <widget class="QDialog" name="RecommendResult">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>516</width>
+    <height>433</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>331</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="MainLayout" stretch="1,12">
+    <property name="spacing">
+     <number>12</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="WeekLayout">
+      <item>
+       <widget class="QLabel" name="BlankLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="MonLabel">
+        <property name="text">
+         <string>星期一</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="TueLabel">
+        <property name="text">
+         <string>星期二</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="WedLabel">
+        <property name="text">
+         <string>星期三</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="ThuLabel">
+        <property name="text">
+         <string>星期四</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="FriLabel">
+        <property name="text">
+         <string>星期五</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="SatLabel">
+        <property name="text">
+         <string>星期六</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="SunLabel">
+        <property name="text">
+         <string>星期日</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="TableLayout" stretch="1,7">
+      <item>
+       <layout class="QVBoxLayout" name="TimeLayout">
+        <item>
+         <widget class="QLabel" name="T1Label">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T2Label">
+          <property name="text">
+           <string>2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T3Label">
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T4Label">
+          <property name="text">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T5Label">
+          <property name="text">
+           <string>5</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T6Label">
+          <property name="text">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T7Label">
+          <property name="text">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T8Label">
+          <property name="text">
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T9Label">
+          <property name="text">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T10Label">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T11Label">
+          <property name="text">
+           <string>11</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="T12Label">
+          <property name="text">
+           <string>12</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="CourseTableLayout">
+        <item>
+         <layout class="QVBoxLayout" name="C1Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C2Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C3Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C4Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C5Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C6Layout"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="C7Layout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>320</y>
+     <width>160</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="InformLayout">
+    <item>
+     <layout class="QHBoxLayout" name="UpLayout">
+      <item>
+       <widget class="QLabel" name="PriorityTitleLabel">
+        <property name="text">
+         <string>总优先度：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="PriorityLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="MiddleLayout">
+      <item>
+       <widget class="QLabel" name="PointTitleLabel">
+        <property name="text">
+         <string>总学分：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="PointLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="DownLayout">
+      <item>
+       <widget class="QLabel" name="TimeTitleLabel">
+        <property name="text">
+         <string>总学时：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="TimeLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>90</y>
+     <width>121</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="CourseLayout">
+    <item>
+     <spacer name="Spacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
